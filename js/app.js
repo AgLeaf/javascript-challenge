@@ -4,7 +4,7 @@ function demoInfo(sample)
     //console.log(sample);
 
     // use d3.json inorder to get the data
-    d3.json("samples.json").then((data) => {
+    d3.json("./data/samples.json").then((data) => {
         // grab all of the metadata
         let metaData = data.metadata;
         //console.log(metaData);
@@ -39,7 +39,7 @@ function buildBarChart(sample)
     //let data = d3.json("samples.json");
     //console.log(data);
 
-    d3.json("samples.json").then((data) => {
+    d3.json("./data/samples.json").then((data) => {
         // grab all of the samples
         let sampleData = data.samples;
 
@@ -83,7 +83,7 @@ function buildBubbleChart(sample)
     //let data = d3.json("samples.json");
     //console.log(data);
 
-    d3.json("samples.json").then((data) => {
+    d3.json("./data/samples.json").then((data) => {
         // grab all of the samples
         let sampleData = data.samples;
 
@@ -133,7 +133,7 @@ function initialize()
     var select = d3.select("#selDataset");
 
     // use d3.json in order to get the data
-    d3.json("samples.json").then((data) => {
+    d3.json("./data/samples.json").then((data) => {
         let sampleNames = data.names; // made an array of just the names
         console.log(sampleNames);
 
